@@ -1,0 +1,54 @@
+:root {
+  --color-primary-dark: #217dbb;
+  --color-primary: #3498db;
+  --color-primary-light: #5faee3;
+
+  --color-secondary-light: #e3945f;
+  --color-secondary: #db7734;
+  --color-secondary-dark: #bb5f21;
+
+  --color-grey-light-1: #ebebeb;
+  --color-grey-light-2: #e4e4e4;
+
+  --color-grey-dark-1: #3a4c58;
+  --color-grey-dark-2: #07131b;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.6;
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  background-image: linear-gradient(
+    to right bottom,
+    var(--color-primary-light),
+    var(--color-primary-dark)
+  );
+  min-height: 100vh;
+}
+.container {
+  max-width: 114rem;
+  min-height: 90rem;
+  background-color: #fff;
+  margin: 8rem auto;
+  border-radius: 10px;
+  display: grid;
+  overflow: hidden;
+  grid-template-rows: 8rem;
+  grid-template-columns: [sidebar-start] 30rem [sidebar-end] repeat(
+      5,
+      [col-start] minmax(min-content, 1fr) [col-end]
+    );
+}
